@@ -13,12 +13,13 @@ int main(void) {
             printf("NO, %d\n", count);
         }
         else {
-            while (i <= n) {
+            while (i < n) {
                 if (n % i != 0 && i != n) {
                     count ++;
                     i += 2;
                 }
                 else if (n % i == 0 && i != n) {
+                    count ++;
                     yes = 0;
                     break;
                 }
