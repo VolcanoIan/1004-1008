@@ -14,12 +14,15 @@ int main(void) {
         }
         else {
             while (i <= n) {
-                if (n % i != 0) {
+                if (n % i != 0 && i != n) {
                     count ++;
                     i += 2;
                 }
-                else {
+                else if (n % i == 0 && i != n) {
                     yes = 0;
+                    break;
+                }
+                else if (n % i == 0 && i == n) {
                     break;
                 }
             }
